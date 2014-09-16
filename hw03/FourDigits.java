@@ -16,19 +16,21 @@ import java.util.Scanner;
 public class FourDigits{
     
 //  add main method 
-  public static void main(String[ ] args) {
-        Scanner myScanner;                         //declare an instance of the Scanner object
-        myScanner = new Scanner( System.in );
+    public static void main(String[ ] args) {
+    Scanner myScanner;                         //declare an instance of the Scanner object
+    myScanner = new Scanner( System.in );
          
-        System.out.print("Enter a myDouble: ");
+    System.out.print("Enter a double: ");
         
-        double myDouble = myScanner.nextInt();
+    double myDouble = myScanner.nextDouble();
         
-        int fourDigits;
+    int number1= (int) myDouble*10000;
+    int number2= (int) (myDouble*10000);
         
-        fourDigits=(int)(myDouble*10000)%10000;
+    int fourDigits= number2-number1;
         
-        System.out.println("The four digits to the right of the decimal point are "+fourDigits+"");
+        
+  System.out.printf("The four digits to the right of the decimal point are %04d",fourDigits);
         
   }  //end of main method   
 } //end of class
