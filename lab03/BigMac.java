@@ -6,9 +6,9 @@
 //
 //  First import the scanner class
 //  compile the program
-//      javac Cyclometer.java
+//      javac BigMac.java
 //  run the program
-//      java Cyclometer//
+//      java BigMac//
 import java.util.Scanner;
 
 //  define a class
