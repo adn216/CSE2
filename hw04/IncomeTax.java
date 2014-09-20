@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////
 //Aimee Denyse Niwenshuti
-//Homework 3: Income taxes
+//Homework 4: Income taxes
 //This program is meant to compute tax on different incomes
 //September 23th, 2014
 //
