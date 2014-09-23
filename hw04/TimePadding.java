@@ -26,7 +26,7 @@ public class TimePadding{
     int nMin= (int) (nSeconds%3600)/60;
     int seconds=(int) (nSeconds%3600)%60;
     
-    System.out.printf("The time is "+nHours+":"+nMin+":"+seconds+"");
+    System.out.printf("The time is %d:%02d:%02d",nHours, nMin, seconds);
     
     }
     
