@@ -26,7 +26,7 @@ public class CourseNumber{
     int year= (int) courseNumber/100;
     int semester= courseNumber-(year*100);
     
-    if (courseNumber < 1865010 || courseNumber > 201440) {
+    if (courseNumber > 201440 || courseNumber < 186510 ) {
         System.out.println("The number was outside the range [186510,201440]");
     }
     else if (semester==10) {
