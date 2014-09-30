@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////
 //Aimee Denyse Niwenshuti
-//Homework 4: Time Padding
+//Homework 5: Burger King
 //This program is meant to display an order
 //September 30th, 2014
 //
