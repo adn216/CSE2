@@ -9,13 +9,13 @@ public class Exam {
     
     Scanner input= new Scanner (System.in);
     
-    System.out.print("Enter a year: ");
+    System.out.print("Enter the three digits: ");
     
-    int year= input.nextInt();
-    
-    boolean isLeapYear=(year%4==0 && year%100 !=0) || (year%400==0);
+    int number1=input.nextInt();
+    int number2=input.nextInt();
+    int number3=input.nextInt();
         
-    System.out.println(year+" is leap year? "+ isLeapYear);
+    System.out.println((number1*number2)/number3);
   
     }
 }
