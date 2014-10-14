@@ -9,48 +9,49 @@ public class LoopTheLoop {
     Scanner myScanner;                         //declare an instance of the Scanner object
     myScanner = new Scanner( System.in );
         
-    System.out.print("enter an int between 1 and 15: ");
-        
-    int nStars=myScanner.nextInt();
+    
+    int nStars;    
+    
         
     int inputValue=1;
     
-    while (true) {
     
-        while (nStars<1 || nStars>15) {
+    while (true) {
+        System.out.print("enter an int between 1 and 15: ");
+        nStars=myScanner.nextInt();
+        if (nStars>1 || nStars<15) {
         
             
             while (inputValue<=nStars) {
+                
                 int numberOfStars=1;
                 while (numberOfStars<=inputValue) {
                     System.out.print("*");
                     
                     numberOfStars++;
                 }
+            
             System.out.println();
             inputValue++;
-            break;
             
-            System.out.print("Do you want to continue (Y, y): ");
-        
-    
-            String answer=myScanner.next();
-            
-            
-                if (answer.equals ("Y") || answer.equals ("y")) { 
-                    continue;
-        
-                 }
-        
             }
-            
-        System.out.println("Your integer was not in range [1,15]"); 
+            inputValue=1;
+        }
+        
+        else {
+            System.out.print("The number is out of range");
+        }
+    System.out.print("Do you want to continue?: ");
+    String answer=myScanner.next();
+    
+    if (answer.equals ("y") || answer.equals ("Y")) {
+        
+    }
+    else {
         break;
         
-        }
-    
-   break;
-    }
+    }  
+    }   
     
     } 
 }
