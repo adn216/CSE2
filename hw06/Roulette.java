@@ -1,7 +1,7 @@
 //Aimee Denyse Niwenshuti
 //CSE 2 Hwk6
 //October 14th, 2014
-
+//This program computes the number of winnings in a Roulette game
 
 public class Roulette {
     public static void main (String [ ] args) {
