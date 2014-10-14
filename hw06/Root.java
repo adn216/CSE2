@@ -1,9 +1,8 @@
+
 //Aimee Denyse Niwenshuti
 //CSE 2 Hwk6
 //October 14th, 2014
-//Aimee Denyse Niwenshuti
-//CSE 2 Hwk6
-//October 14th, 2014
+//This program estimates the square root of a number
 import java.util.Scanner;
 
 public class Root {
@@ -17,29 +16,26 @@ public class Root {
     
     double low=0.0;
     double high=1+x;
-    double middle;
+    double middle=0.0;
+        
+    if (x<0){
+        System.out.println("A positive double is expected");
+        return;
+    }
     
-    while (low<high) {
-        middle=(1+x)/2;
-        while (Math.pow(middle,2)>high) {
-        System.out.print("["+low+" , "+Math.pow(middle,2)+"]");
+    while ((high-low)>0.0000001*(1+x)) {
         
-            middle=(1+Math.pow(middle,2))/2;
-            while (Math.pow(middle,2)<high){
-            System.out.print("["+Math.pow(middle,2)+" , "+high+"]");
-            
-        middle++;
+        middle=(high+low)/2;
         
-            }
-        middle++;
-        
+        if (Math.pow(middle, 2)>x) {
+        high=middle;
+         }
+        else {
+        low=middle;
         }
-    
-    System.out.println();
-    x++;
-    break;
-      
-    }   
         
+    }
+    System.out.println("The square root of "+x+" is between ["+low+","+high+"]");
+    
     }
 }
