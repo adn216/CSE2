@@ -61,7 +61,7 @@ public class Enigma3{
 
 /*
  * Error report:
- * 
+ * The system crashed on line 55 because that is when k became 0
  * 
  * 
  * 
