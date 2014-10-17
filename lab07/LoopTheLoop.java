@@ -19,7 +19,7 @@ public class LoopTheLoop {
     while (true) {
         System.out.print("enter an int between 1 and 15: ");
         nStars=myScanner.nextInt();
-        if (nStars>1 || nStars<15) {
+        if (nStars>1 && nStars<15) {
         
             
             while (inputValue<=nStars) {

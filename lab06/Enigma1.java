@@ -10,12 +10,15 @@
 import java.util.Scanner;
 public class Enigma1{
   public static void main(String [ ] arg){
-    double percent;
+    //double percent;
     System.out.print("Enter a value for the percent (0, 1,...99)- ");
     double x=((new Scanner(System.in)).nextDouble());
    System.out.println("You entered "+x+"%");
    //print out the proportion remaining for select percentages
-   if(1-x/100==0.93)  //when the user enters 7
+   double proportionOutOf1=x/100;
+   double proportionRemaining=1-proportionOutOf1;
+   System.out.printf("The proportion remaining is %01f " , proportionRemaining);
+   /*if(1-x/100==0.93)  //when the user enters 7
       System.out.println("The proportion remaining is "+0.93);
     else if(1-x/100==0.59)//when the user enters 41
       System.out.println("The proportion remaining is "+0.59);
@@ -24,17 +27,16 @@ public class Enigma1{
     else if(1-x/100==0.67)//when the user enters 33
       System.out.println("The proportion remaining is "+0.67);
     else if(1-x/100==0.4)//when the user enters 60
-      System.out.println("The proportion remaining is "+0.40);
+      System.out.println("The proportion remaining is "+0.40);*/
    }
 }
 
 /* Error report: 
- *    (Exlain the error(s) that occur here, in this comment,
- *    and fix the errors)
- *    Hint: What kinds of input are unacceptable? What kinds of
- *        acceptable input don't produce the correct answer?
+ *  It is better to declare the calculations before printing out anything 
+ *  
+ *  Using if statements would limit the program because you can't be able 
+ *  to list out if statements for all values of x
  * 
- * 
- * 
- * 
+ * The proportion remaining are not exact because we are using doubles
+ * The variable percent was not needed since we have x interpreted as the percent
  */
