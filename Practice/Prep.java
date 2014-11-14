@@ -22,7 +22,7 @@ while(a<5){
       System.out.println("[" +b+ "]" );
       b-=1;
     }
-    x +=0;
+    x +=1;
 }
 
     
