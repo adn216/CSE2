@@ -28,9 +28,7 @@ public class Arrays{
         input[7]=scan.nextInt();
         input[8]=scan.nextInt();
         input[9]=scan.nextInt();
-        
-        
-        //int index = 0;
+
         int min = input[0];
         int max = input[0];;
         
@@ -38,28 +36,16 @@ public class Arrays{
         for (i=1; i<10; i++){
 	        if (input[i] < min) {
 		        min = input[i];
-		        //index = i;
 	        }
 	        
 	        
 	        if (input[i] > max) {
 		        max = input[i];
-		        
 	        }
 	 
         }
         System.out.println("The lowest input is " +min);
         System.out.println("The lowest input is " +max);
-        
-        //int max=input[0];
-        
-        /*for (i=1; i<10; i++){
-	        if (input[i] > max) {
-		        max = input[i];
-		        
-	        }
-        }*/
-        //System.out.println("The lowest input is " +max);
         
         int sum=0;
         

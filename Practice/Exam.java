@@ -1,28 +1,32 @@
+//import java.util.Scanner;
+
 public class Exam{
 
 public static void main( String args[] ){
-	int i = 1;
-	//int numberOfLines=1;
-	int count;
-	int digitsInOneLine=1;
-	//int count1;
 	
-	for( i = 6; i>=1; i-- ){
-	    if(i>2){
-		for(count=i-2; count>=1; count--){
-		    for(digitsInOneLine=1; digitsInOneLine<=count; digitsInOneLine++){
-		        System.out.print(i);
-		    }
-		    System.out.println();
-		}
+	//Scanner scan=new Scanner (System.in);
+	
+	int [ ] deck=new int [52];
+	
+	String [] suits={"Spades", "Hearts", "Diamonds", "Clubs"};
+	String [] ranks={"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+	
+	for (int i=0; i<52; i++){
+		deck[i]=i;
 	}
-	if(i<3){
-	    System.out.println(i);
-	    
-}
-}
-
-
-    
+	
+	for (int i=0; i<52; i++){
+		int index= (int) (Math.random()*52);
+		
+		int temp=deck[i];
+		deck[i]=deck[index];
+		deck[index]=temp;
+	}
+	
+	for (int i=0; i<4; i++){
+		String suit=suits[deck[i]/13];
+		String rank=ranks[deck[i]%13];
+		System.out.println("Card number "+deck[i]+": "+rank+" of "+suit);
+	}
 }
 }
