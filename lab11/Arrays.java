@@ -45,7 +45,7 @@ public class Arrays{
 	 
         }
         System.out.println("The lowest input is " +min);
-        System.out.println("The lowest input is " +max);
+        System.out.println("The highest input is " +max);
         
         int sum=0;
         
