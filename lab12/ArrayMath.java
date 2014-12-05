@@ -90,18 +90,22 @@ public class ArrayMath{
        
    return sum;
   }
+  
   public static boolean equals(double [] a, double [] b){
       boolean result=false;
       
       if(a.length==b.length){
-          
-        for(int i=0, j=0; i<a.length && j<b.length; i++, j++){
+          if(a[0]==b[0] && a[1]==b[1] && a[2]==b[2]){
+        /*for(int i=0; i<a.length; i++){
            
-                if(a[i]==b[j]){
-                    result=true;
+                if(a[i]==b[i]){
+                    
                 }
-        }
+            
+        }*/
+        result=true;
         
+      }
       }
       else{
           result=false;
