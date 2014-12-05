@@ -1,57 +1,28 @@
 
 import java.util.Scanner;
-public class Rest{
-    public static void main (String [] args){
-        
-        Scanner scan=new Scanner(System.in);
-        int number;
-        boolean check=false;
-        
-        //boolean isPrime=true;
-        
-        do{
-            System.out.print("Enter a positive integer: ");
-            
-            while(!scan.hasNextInt()){
-                scan.next();
-                System.out.println("You did not enter an integer, try again: ");
-            }
-            number=scan.nextInt();
-            
-            if(number==0){
-                check=false;
-                System.out.println(" GoodBye ");
-            }
-            else if(number<0){
-                check=false;
-                System.out.println(" Invalid ");
-            }
-            else{
-                check=true;
-                if(isPrime(number)){
-                    System.out.println("PRIME! ");
-                }
-                else{
-                    System.out.println("Not PRIME");
-                }
-            
-        } 
-        
-    }while(check);
-}
 
-public static boolean isPrime(int x){
-    int divisor;
-    for(divisor=2; divisor<=(x/2); divisor++){
-        if(x % divisor==0){
-            return false;
-        }
-        
-    
+public class Rest {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Enter 10 integers: ");
+    int[] myList = new int[10];
+    for (int i = 0; i < myList.length; i++)
+      myList[i] = input.nextInt();
+
+    reverse(myList);
+
+    for (int i = 0; i < myList.length; i++)
+      System.out.print(myList[i] + " ");
+  }
+
+  public static int[] reverse(int[] list) {
+    for (int i = 0, j = list.length - 1; i < list.length / 2; i++, j--) {
+      int temp = list[i];
+      list[i] = list[j];
+      list[j] = temp;
     }
-    
-            return true;
-}
 
-
+    return list;
+  }
 }
