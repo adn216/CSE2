@@ -42,35 +42,54 @@ public class ArrayMath{
    public static double [] addArrays(double [] A, double [] B){
        
        double [] sum=new double[A.length];
+       int m;
+       int x;
        
     for(int r=0, s=0; r<A.length && s<B.length; r++, s++){
         
         if (A.length==B.length){
            sum[r]=A[r]+B[s];
         }
+    }
        
-        else if (A.length>B.length){
-            while(s>B.length-1 && s<A.length-1){
-                    B[s]=0;
-            }   
-            sum[s]=A[r]+B[s];
+        double [] newArray=new double [A.length];
+       
+        if (A.length>B.length){
+            
+            for(m=0; m<A.length; m++){
+                if(m<B.length){
+                    newArray[m]=B[m];
+                } 
+                else{
+                    newArray[m]=0; 
+                }
+            }
+            
+            for(int k=0; k<A.length; k++){
+          
+            sum[k]=A[k]+newArray[k];
+            }
         }
        
        else{
-            while(r>A.length-1 && r<B.length-1){
-                    A[r]=0;
+            for(x=0; x<B.length; x++){
+                if(x<A.length){
+                    newArray[x]=A[x];
+                } 
+                else{
+                    newArray[x]=0; 
+                }
             }
-            sum[r]=A[r]+B[s];
-        }
-   }       
+            
+            for(int l=0; l<B.length; l++){
+          
+            sum[l]=B[l]+newArray[l];
+            }
+           
+       }
        
-       return sum;
-       
-   }
-   
-   
-   
-  
+   return sum;
+  }
   public static boolean equals(double [] a, double [] b){
       boolean result=false;
       
@@ -90,18 +109,3 @@ public class ArrayMath{
       return result;
   }
 }
-
-//output:
-
-/*OUTPUT: {2.3, 3.0, 4.0, -2.1, 82.0, 23.0} 
-  + {2.3, 3.0, 4.0, -2.1, 82.0, 23.0}
-   = {4.6, 6.0, 8.0, -4.2, 164.0, 46.0}
-{2.3, 3.0, 4.0, -2.1, 82.0, 23.0} 
-  + {2.3, 13.0, 14.0}
-   = {4.6, 16.0, 18.0, -2.1, 82.0, 23.0}
-It is true that {2.3, 3.0, 4.0, -2.1, 82.0, 23.0}
-   == {2.3, 3.0, 4.0, -2.1, 82.0, 23.0}
-It is false that {2.3, 13.0, 14.0}
-   == {2.3, 13.0, 14.0, 12.0}
-It is false that {2.3, 12.0, 14.0}
-   == {2.3, 13.0, 14.0}*/
