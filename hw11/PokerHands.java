@@ -1,7 +1,7 @@
 // Aimee Denyse Niwenshuti
 // HW11 
 // Dec 5th 2014
-// Poker Hands
+// Poker Hands: the program shows the rank of a hand
 import java.util.Scanner;
 
 public class PokerHands{
@@ -32,7 +32,7 @@ public class PokerHands{
 
     String [] [] numberOfCards= new String [4][13];
 
-    for (int i=0; i<4; i++){
+    for (int i=0; i<4; i++){ // making 2d array of suits and cards
 
          numberOfCards[i][0]="A";
 
@@ -70,13 +70,13 @@ public class PokerHands{
 
   if(answer3.equals("y") || answer3.equals("Y")){
 
-    while(count<5){
+    while(count<5){ //asking the user for the suit and card for five times
 
  System.out.print("Enter the suit: c, d, h, s: ");
 
     String answer1= scan.next();
 
-        while(true){
+        while(true){ //checking if the user enter the acceptable input
 
             if(answer1.equals ("c") || answer1.equals ("d") || answer1.equals ("h") || answer1.equals ("s")){
 
@@ -125,7 +125,7 @@ public class PokerHands{
 
     int test=0;
 
-        while(true){
+        while(true){ //checking if the use inputs the acceptable value
 
             switch(answer2){
 
@@ -300,8 +300,8 @@ public class PokerHands{
 
    }
 
-     System.out.println(number1+"\n"+number2+"\n"+number3+"\n"+number4);
-     for(int m=0; m<5; m++){
+     System.out.println(number1+"\n"+number2+"\n"+number3+"\n"+number4);//printing the hand
+     for(int m=0; m<5; m++){ //printing the array of the hand
         System.out.print(array[m]+" ");
      }
     
@@ -335,7 +335,7 @@ public class PokerHands{
 
     }
     
-  public static boolean royalFlush(String [] array){
+  public static boolean royalFlush(String [] array){ //Checking if the hand is a royal flush
     boolean result=false;
       
     if(array[0].equals("A") && array[1].equals("K") && array[2].equals("Q") && array[3].equals("J") && array[4].equals("10")){
@@ -344,7 +344,7 @@ public class PokerHands{
     return result;
   }  
 
-  public static boolean straightFlush(String [] array){
+  public static boolean straightFlush(String [] array){ //Checking if the hand is a straight flush
       
       boolean result1=false;
       if(array[0].equals(array[1]) && array[0].equals(array[2]) && array[0].equals(array[3]) ){
@@ -353,7 +353,7 @@ public class PokerHands{
       return result1;
   } 
   
-   public static boolean fullHouse(String [] array){
+   public static boolean fullHouse(String [] array){ //Checking if the hand is a full house
       
       boolean result2=false;
       if(array[0].equals(array[1]) && array[0].equals(array[2]) && array[3].equals(array[4]) ){
@@ -362,7 +362,7 @@ public class PokerHands{
       return result2;
   } 
   
-  public static boolean twoPair(String [] array){
+  public static boolean twoPair(String [] array){ //Checking if the hand is a two pair
       
       boolean result3=false;
       if(array[0].equals(array[1]) && array[2].equals(array[3]) && !array[0].equals(array[2]) && !array[2].equals(array[4]) ){
@@ -371,7 +371,7 @@ public class PokerHands{
       return result3;
   }
   
-  public static boolean onePair(String [] array){
+  public static boolean onePair(String [] array){ //Checking if the hand is a one pair
       
       boolean result4=false;
       if(array[0].equals(array[1]) && !array[0].equals(array[2]) && !array[0].equals(array[3]) && !array[0].equals(array[4]) ){
